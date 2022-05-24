@@ -1,0 +1,22 @@
+.App-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 10vh;
+}
+
+.App-logo {
+  width: 5vh;
+  height: 5vh;
+}
+
+canvas {
+  width: 200px;
+}
+
+.App-header div:nth-child(3) {
+  border: 1px solid cyan;
+
+  width: 100px !important;
+}

@@ -1,0 +1,18 @@
+.slide-container {
+  height: 86vh;
+  background-color: #282c34;
+  color: #ffffff;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 2vh 2vw;
+
+  border-left: 1px solid pink;
+  border-right: 1px solid pink;
+}
+
+h1 {
+  margin: 0;
+}
