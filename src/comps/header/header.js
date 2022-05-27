@@ -8,7 +8,7 @@ import "./header.css";
 function Box(props) {
   return (
     <mesh {...props}>
-      <boxGeometry args={[2, 2, 2]} />
+      <boxBufferGeometry attach={"geometry"} />
       <meshStandardMaterial color={"orange"} />
     </mesh>
   );
@@ -27,11 +27,11 @@ const Scene = () => {
 const Header = () => {
   return (
     <header className="App-header">
-      <Logo className="App-logo" />
-      <Pagination />
       <Canvas>
         <Scene />
       </Canvas>
+      <Pagination />
+      <Logo className="App-logo" />
     </header>
   );
 };
