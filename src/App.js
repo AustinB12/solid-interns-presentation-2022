@@ -35,7 +35,7 @@ function App() {
             transition={{ x: { duration: 2 } }}
           >
             <Slide>
-              <h1 style={{ color: "green" }}>Slide 1</h1>
+              <h1>SOLID Programmming Principals</h1>
             </Slide>
           </motion.div>
         );

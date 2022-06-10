@@ -13,14 +13,8 @@
   padding-right: 20px;
 }
 
-canvas {
-  width: 200px;
-}
-
-.App-header div:nth-child(1) {
-  /* border: 1px solid cyan; */
-
-  width: 100px !important;
+.App-logo:hover {
+  cursor: pointer;
 }
 
 .pagination svg > *:hover {
@@ -37,4 +31,15 @@ canvas {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.App-header .current-position-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 10%;
+
+  font-size: xx-large;
+  font-weight: bold;
 }

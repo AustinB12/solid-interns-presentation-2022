@@ -1,37 +1,18 @@
 import React from "react";
 import { Pagination } from "./pagination";
 import { ReactComponent as Logo } from "../../assets/SW-Icon.svg";
-import { Canvas } from "react-three-fiber";
+import { useIndex } from "../../hooks/indexContext";
 
 import "./header.css";
 
-function Box(props) {
-  return (
-    <mesh {...props}>
-      <boxBufferGeometry attach={"geometry"} />
-      <meshStandardMaterial color={"orange"} />
-    </mesh>
-  );
-}
-
-const Scene = () => {
-  return (
-    <>
-      <ambientLight />
-      <pointLight position={[10, 10, 10]} />
-      <Box position={[0, 0, 0]} />
-    </>
-  );
-};
-
 const Header = () => {
+  const [currentPosition, setCurrentPosition] = useIndex();
+
   return (
     <header className="App-header">
-      <Canvas>
-        <Scene />
-      </Canvas>
+      <Logo className="App-logo" onClick={() => setCurrentPosition(0)} />
       <Pagination />
-      <Logo className="App-logo" />
+      <div className="current-position-wrapper">{currentPosition}</div>
     </header>
   );
 };

@@ -16,7 +16,6 @@ const Pagination = () => {
 
   return (
     <div className="pagination">
-      <h1>{currentPosition}</h1>
       <div className="pages-holder">
         <svg
           width="16"
