@@ -5,3 +5,12 @@
   color: #ffffff;
   height: 100vh;
 }
+
+div {
+  background-color: #282c34;
+  color: #ffffff;
+}
+
+.pageBreak {
+  min-height: 90vh;
+}
