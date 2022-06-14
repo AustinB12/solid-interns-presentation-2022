@@ -1,5 +1,5 @@
 .slide-container {
-  height: 86vh;
+  min-height: 86vh;
   width: 96vw;
   background-color: #282c34;
   color: #ffffff;
@@ -10,7 +10,7 @@
 
   position: absolute;
 
-  padding: 2vh 2vw;
+  margin: 2vh 2vw;
 }
 
 h1 {

@@ -105,7 +105,9 @@ const Slides = ({ currentPosition, setNumOfSlides }) => {
             replaced with its{" "}
           </p>
         </div>
-        <img src={Board} alt="Board Game Example" />
+        <div className="pageBreak">
+          <img src={Board} alt="Board Game Example" />
+        </div>
         <div className="pageBreak">
           <p>
             Fun Fact! This is Barbara Liskov, I.E. where this principle comes

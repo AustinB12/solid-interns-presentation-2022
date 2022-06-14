@@ -3,7 +3,7 @@
 
   background-color: #282c34;
   color: #ffffff;
-  height: 100vh;
+  min-height: 200vh;
 }
 
 div {
