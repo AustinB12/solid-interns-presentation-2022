@@ -1,18 +1,30 @@
 import React from "react";
 import { useIndex } from "../../hooks/indexContext";
 
-const Pagination = () => {
+const Pagination = ({ numOfSlides }) => {
   const [currentPosition, setCurrentPosition] = useIndex();
 
-  const slides = [
-    { id: 0, position: 1 },
-    { id: 1, position: 2 },
-    { id: 2, position: 3 },
-    { id: 3, position: 4 },
-    { id: 4, position: 5 },
-    { id: 5, position: 6 },
-    { id: 6, position: 7 },
-  ];
+  const getCircles = () => {
+    let circles = [];
+    for (let i = 0; i < numOfSlides; i++) {
+      circles.push(
+        <circle
+          key={i}
+          cx={(i + 1) * 24}
+          cy="12"
+          r="10"
+          fill="#D9D9D9"
+          onClick={() => setCurrentPosition(i)}
+          className={i === currentPosition ? "currentPage" : ""}
+        />
+      );
+    }
+    return circles;
+  };
+
+  const getWidth = () => {
+    return (numOfSlides + 1) * 24;
+  };
 
   return (
     <div className="pagination">
@@ -32,19 +44,12 @@ const Pagination = () => {
             strokeLinejoin="round"
           />
         </svg>
-        <svg width="200" height="24" viewBox="0 0 200 24">
-          {slides.map((slide) => {
-            return (
-              <circle
-                key={slide.id}
-                cx={slide.position * 24}
-                cy="12"
-                r="10"
-                fill="#D9D9D9"
-                onClick={() => setCurrentPosition(slide.id)}
-              />
-            );
-          })}
+        <svg
+          width={getWidth().toString()}
+          height="24"
+          viewBox={`0 0 ${getWidth().toString()} 24`}
+        >
+          {getCircles().map((c) => c)}
         </svg>
         <svg
           width="16"

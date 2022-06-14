@@ -6,7 +6,7 @@ IndexContext.displayName = "IndexContext";
 const useIndex = () => {
   const context = React.useContext(IndexContext);
   if (context === undefined) {
-    throw new Error("useIndex must be used within a IndexProvider");
+    throw new Error("useIndex must be used within an IndexProvider");
   }
   return context;
 };

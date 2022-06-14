@@ -5,13 +5,13 @@ import { useIndex } from "../../hooks/indexContext";
 
 import "./header.css";
 
-const Header = () => {
+const Header = ({ numOfSlides }) => {
   const [currentPosition, setCurrentPosition] = useIndex();
 
   return (
     <header className="App-header">
       <Logo className="App-logo" onClick={() => setCurrentPosition(0)} />
-      <Pagination />
+      <Pagination numOfSlides={numOfSlides} />
       <div className="current-position-wrapper">{currentPosition}</div>
     </header>
   );

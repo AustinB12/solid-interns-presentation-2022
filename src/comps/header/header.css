@@ -38,8 +38,12 @@
   justify-content: center;
   align-items: center;
 
-  width: 10%;
+  width: 5vh;
 
   font-size: xx-large;
   font-weight: bold;
+}
+
+.pages-holder svg circle.currentPage {
+  fill: #fff;
 }
